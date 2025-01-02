@@ -17,3 +17,7 @@ module.exports = {
         defaultTimeout: 30000,
     },
 }
+
+// require: ['./features/step_definitions/*.js'], // Step definitions
+// format: ['json:reports/cucumber-report.json', 'html:reports/cucumber-report.html'], // Multiple report formats
+// paths: ['./features/*.feature'], // Feature files}

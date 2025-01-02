@@ -6,7 +6,7 @@ const Reporter = require('multiple-cucumber-html-reporter');
 const os = require('os');
 
 export function GenerateReport() {
-    try {
+    // try {
         // Generate the report
         Reporter.generate({
             jsonDir: REPORT_PATH,
@@ -30,7 +30,7 @@ export function GenerateReport() {
             customData: {
                 title: 'Run Information',
                 data: [
-                    { label: 'Project', value: 'Nefco Automation Project' },
+                    { label: 'Project', value: 'Automation Project' },
                     // { label: 'Release', value: properties.get("branch_name") },
                     { label: 'Purpose', value: 'Regression Suite UI verification' },
                     { label: 'Instance', value: properties.get('BASE_URL') },
@@ -39,10 +39,11 @@ export function GenerateReport() {
                 ]
             }
         });
-    } catch (error) {
-        console.error('Error during report generation or browser closing:', error);
-    }
+    // } catch (error) {
+    //     console.error('Error during report generation or browser closing:', error);
+    // }
 }
+
 function getOSType(type: string) {
     if (type == 'Windows_NT') {
         return 'windows';

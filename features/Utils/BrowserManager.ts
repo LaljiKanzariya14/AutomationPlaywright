@@ -34,7 +34,7 @@ export async function launchBrowser(headless: boolean = false): Promise<Page> {
         });
         context = await browser.newContext({
             permissions: ['notifications'],
-            viewport: { width: 1920, height: 1080 },
+            // viewport: { width: 1920, height: 1080 },
         });
     }
     if (!page) {
